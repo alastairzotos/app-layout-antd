@@ -3,8 +3,15 @@ import { AppLayoutProvider, createNavMenuItem } from '@bitmetro/app-layout-antd'
 import { DeploymentUnitOutlined, ApiOutlined } from '@ant-design/icons';
 
 import "../styles/globals.css";
+import { ConfigProvider, theme } from "antd";
 
-const AppPage = ({ Component, pageProps }: AppProps) => {
+const { darkAlgorithm } = theme;
+
+const Inner = ({ Component, pageProps }: AppProps) => {
+  const {
+    token: { colorBgContainer },
+  } = theme.useToken();
+
   return (
     <AppLayoutProvider
       title="Example App"
@@ -19,10 +26,22 @@ const AppPage = ({ Component, pageProps }: AppProps) => {
         '[testId]': (id: string) => Promise.resolve(`Id: ${id}`)
       }}
       appBar={<span>testing</span>}
-      appBarStyles={{ backgroundColor: 'white' }}
+      appBarStyles={{ backgroundColor: colorBgContainer }}
     >
       <Component {...pageProps} />
     </AppLayoutProvider>
+  )
+}
+
+const AppPage = (props: AppProps) => {
+  return (
+    <ConfigProvider
+      theme={{
+        algorithm: darkAlgorithm
+      }}
+    >
+      <Inner {...props} />
+    </ConfigProvider>
   )
 }
 
