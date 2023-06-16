@@ -1951,9 +1951,13 @@ var AppLayoutProvider = function(_param) {
     var children = _param.children, props = _object_without_properties(_param, [
         "children"
     ]);
-    return /* @__PURE__ */ import_react8.default.createElement(AppLayoutContext.Provider, {
+    return /* @__PURE__ */ import_react8.default.createElement("div", {
+        style: {
+            width: "100%"
+        }
+    }, /* @__PURE__ */ import_react8.default.createElement(AppLayoutContext.Provider, {
         value: props
-    }, /* @__PURE__ */ import_react8.default.createElement(Wrapper, null, children));
+    }, /* @__PURE__ */ import_react8.default.createElement(Wrapper, null, children)));
 };
 var useAppLayout = function() {
     return import_react8.default.useContext(AppLayoutContext);

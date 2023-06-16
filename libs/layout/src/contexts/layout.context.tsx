@@ -29,11 +29,13 @@ export const AppLayoutProvider: React.FC<React.PropsWithChildren<IAppLayoutConte
   ...props
 }) => {
   return (
-    <AppLayoutContext.Provider value={props}>
-      <Wrapper>
-        {children}
-      </Wrapper>
-    </AppLayoutContext.Provider>
+    <div style={{ width: "100%" }}>
+      <AppLayoutContext.Provider value={props}>
+        <Wrapper>
+          {children}
+        </Wrapper>
+      </AppLayoutContext.Provider>
+    </div>
   )
 }
 
