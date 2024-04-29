@@ -1928,7 +1928,12 @@ var Content = import_antd6.Layout.Content;
 var Wrapper = function(param) {
     var children = param.children;
     var title = useAppLayout().title;
-    return /* @__PURE__ */ import_react7.default.createElement(import_react7.default.Fragment, null, /* @__PURE__ */ import_react7.default.createElement(import_head.default, null, /* @__PURE__ */ import_react7.default.createElement("title", null, "BitMetro | ", title)), /* @__PURE__ */ import_react7.default.createElement(import_antd6.Layout, null, /* @__PURE__ */ import_react7.default.createElement(Navigation, null), /* @__PURE__ */ import_react7.default.createElement(import_antd6.Layout, null, /* @__PURE__ */ import_react7.default.createElement(AppBar, null), /* @__PURE__ */ import_react7.default.createElement(Content, null, /* @__PURE__ */ import_react7.default.createElement(import_antd6.Space, {
+    return /* @__PURE__ */ import_react7.default.createElement(import_react7.default.Fragment, null, /* @__PURE__ */ import_react7.default.createElement(import_head.default, null, /* @__PURE__ */ import_react7.default.createElement("title", null, "BitMetro | ", title)), /* @__PURE__ */ import_react7.default.createElement(import_antd6.Layout, null, /* @__PURE__ */ import_react7.default.createElement(Navigation, null), /* @__PURE__ */ import_react7.default.createElement(import_antd6.Layout, null, /* @__PURE__ */ import_react7.default.createElement(AppBar, null), /* @__PURE__ */ import_react7.default.createElement(Content, {
+        style: {
+            maxHeight: "calc(100vh - 64px)",
+            overflowY: "scroll"
+        }
+    }, /* @__PURE__ */ import_react7.default.createElement(import_antd6.Space, {
         direction: "vertical",
         style: {
             width: "100%",

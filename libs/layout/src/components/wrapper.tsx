@@ -22,7 +22,7 @@ export const Wrapper: React.FC<React.PropsWithChildren> = ({ children }) => {
         <Layout>
           <AppBar />
 
-          <Content>
+          <Content style={{ maxHeight: 'calc(100vh - 64px)', overflowY: 'scroll' }}>
             <Space direction="vertical" style={{ width: '100%', padding: 12 }}>
               <AutoBreadcrumbs />
 
